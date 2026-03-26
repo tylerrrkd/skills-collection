@@ -3,6 +3,12 @@
 ## Overview
 All APIs are accessed via the `Taro` object, imported from `@tarojs/taro`.
 
+Key concepts and conventions:
+- **Specification**: Taro APIs primarily follow the WeChat Mini-Program specification.
+- **Unified Namespace**: All APIs are unified under the `Taro` namespace to ensure cross-platform compatibility (e.g., mapping Ali's `my.alert` to `Taro.showModal`).
+- **Promisification**: Taro automatically "promisifies" asynchronous APIs, allowing them to be used with standard `Promise` syntax or `async/await`.
+- **Native APIs**: For platform-specific APIs not yet adapted by Taro, developers can use the native platform namespace directly.
+
 ```javascript
 import Taro from '@tarojs/taro'
 ```
